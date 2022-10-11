@@ -12,12 +12,9 @@ mixin _$TestViewModel on _TestViewModelBase, Store {
   Computed<bool>? _$isEvenComputed;
 
   @override
-  bool get isEven => (_$isEvenComputed ??=
-          Computed<bool>(() => super.isEven, name: '_TestViewModelBase.isEven'))
-      .value;
+  bool get isEven => (_$isEvenComputed ??= Computed<bool>(() => super.isEven, name: '_TestViewModelBase.isEven')).value;
 
-  late final _$numberAtom =
-      Atom(name: '_TestViewModelBase.number', context: context);
+  late final _$numberAtom = Atom(name: '_TestViewModelBase.number', context: context);
 
   @override
   int get number {
@@ -32,13 +29,11 @@ mixin _$TestViewModel on _TestViewModelBase, Store {
     });
   }
 
-  late final _$_TestViewModelBaseActionController =
-      ActionController(name: '_TestViewModelBase', context: context);
+  late final _$_TestViewModelBaseActionController = ActionController(name: '_TestViewModelBase', context: context);
 
   @override
   void incrementNumber() {
-    final _$actionInfo = _$_TestViewModelBaseActionController.startAction(
-        name: '_TestViewModelBase.incrementNumber');
+    final _$actionInfo = _$_TestViewModelBaseActionController.startAction(name: '_TestViewModelBase.incrementNumber');
     try {
       return super.incrementNumber();
     } finally {
