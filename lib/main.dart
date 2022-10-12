@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'core/init/navigation/navigation_route.dart';
+import 'core/init/navigation/navigation_service.dart';
 import 'package:provider/provider.dart';
 
 import 'core/constants/app/app_constants.dart';
@@ -26,6 +28,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         theme: Provider.of<ThemeNotifier>(context, listen: false).currentTheme,
         home: const TestView(),
+        onGenerateRoute: NavigationRoute.instance.generateRoute,
+        navigatorKey: NavigationService.instance.navigatorKey,
       ),
     );
   }

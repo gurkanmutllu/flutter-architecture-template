@@ -1,12 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+
 import '../../../../core/base/state/base_state.dart';
 import '../../../../core/base/view/base_widget.dart';
 import '../../../../core/extension/string_extension.dart';
 import '../../../../core/init/lang/language_manager.dart';
 import '../../../../core/init/lang/locale_keys.g.dart';
-
 import '../viewmodel/test_view_model.dart';
 
 class TestView extends StatefulWidget {
